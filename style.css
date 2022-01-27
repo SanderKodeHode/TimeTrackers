@@ -44,7 +44,6 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     margin-top: 10%;
-    border: solid 2px red;
 }
 .activity {
     display: flex;
