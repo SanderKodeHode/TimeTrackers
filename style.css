@@ -224,3 +224,7 @@ body {
     color: white;
     cursor: pointer;
 }
+.title-ellipsis span:hover {
+    color: white;
+}
+
