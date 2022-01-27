@@ -1,0 +1,251 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap");
+* {
+    box-sizing: border-box;
+}
+/*Fonts*/
+h1, h2, h3 {
+    font-weight: 300;
+}
+h3 {
+    font-size: 40px;
+    margin: 0px;
+}
+h2 {
+    font-size: 20px;
+}
+h1 {
+    font-size: 44px;
+}
+.title-hrs p,
+.title-ellipsis span {
+    font-weight: 300;
+    color: #bdc1ff;;
+}
+.title-ellipsis span {
+    font-weight: 500;
+    font-size: 20px;
+}
+/*Flex for cards*/
+.title-ellipsis {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+body {
+    font-family: 'Rubik', sans-serif;
+    background-color: hsl(226, 43%, 10%);
+    margin: 0 auto;
+    color: #fff;
+}
+.container {
+    display: flex;
+    flex-direction: row;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 10%;
+    border: solid 2px red;
+}
+.activity {
+    display: flex;
+    flex-wrap: wrap;
+}
+.picture {
+    width: 100px;
+    border: white solid 3px;
+    border-radius: 50%;
+}
+/*Contains all the activities*/
+.item-container {
+    width: 250px;
+    margin-top: 50px;
+    margin-left: 30px;
+}
+
+.profile-btn {
+    margin-top: 50px;
+    margin-left: 30px;
+}
+.btn {
+    background: none;
+    border: none;
+    color: #6f76c8;
+    font-size: 18px;
+    font-weight: 300;
+    transition: color 300ms;
+    margin-bottom: 1.2rem;
+}
+/*All Activity Cards Color*/
+.bottom {
+    background-color: hsl(235, 46%, 20%);
+    padding: 1.7rem 1.5rem;
+    border-radius: 1rem;
+    padding-top: 17px;
+    padding-bottom: 37px;
+}
+.container .top {
+    border-radius: 1.1rem;
+    padding-top: 2.5rem;
+  }
+/*Card Colors*/
+.work {
+  background-color: #ff8c66;
+  background-image: url("./images/icon-work.svg");
+  background-repeat: no-repeat;
+  background-position-x: 95%;
+  background-position-y: -10%;
+}
+.play {
+  background-color: #56c2e6;
+  background-image: url("./images/icon-play.svg");
+  background-repeat: no-repeat;
+  background-position-x: 95%;
+  background-position-y: -10%;
+}
+.study {
+  background-color: #ff5c7c;
+  background-image: url("./images/icon-study.svg");
+  background-repeat: no-repeat;
+  background-position-x: 95%;
+  background-position-y: -10%;
+}
+.exercise {
+  background-color: #4acf81;
+  background-image: url("./images/icon-exercise.svg");
+  background-repeat: no-repeat;
+  background-position-x: 95%;
+  background-position-y: -10%;
+}
+.social {
+  background-color: #7536d3;
+  background-image: url("./images/icon-social.svg");
+  background-repeat: no-repeat;
+  background-position-x: 95%;
+  background-position-y: -10%;
+}
+.self-care {
+  background-color: #f1c65b;
+  background-image: url("./images/icon-self-care.svg");
+  background-repeat: no-repeat;
+  background-position-x: 95%;
+  background-position-y: -10%;
+}
+
+/*Report Colors*/
+.profile {
+    background-color: #5847eb;
+    align-content: flex-start;
+    display: block;
+    border-radius: 1rem;
+    padding: 2rem;
+    min-height: 370px;
+}
+.report-for {
+    color: #bdc1ff;
+    margin: 15px;
+}
+.report {
+    background-color: hsl(235, 46%, 20%);
+    margin-top: 50px;
+    min-width: 275px;
+    max-width: 275px;
+    border-radius: 1rem;
+    min-height: 550px;
+}
+@media (max-width:1190px) {
+    .container {
+        background-color: red;
+        flex-direction: column;
+        text-align: center;
+        display: block;
+        margin-top: 0%;
+        padding: 25px;
+    }
+    .activity {
+        display: block;
+    }
+    .item-container {
+        width: 375px;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+    .report {
+        width: 375px;
+        max-width: 100%;
+    }
+    main {
+        display: flex;
+        width: 100%;
+    }
+    .picture {
+        width: 100px;
+        height: 100px;
+    }
+    h1 {
+        font-size: 24px;
+        margin-left: 15px;
+    }
+    .report-for {
+        text-align: left;
+    }
+    .profile {
+        min-height: 0px;
+        display: flex;
+    }
+    .profile-text {
+        margin-top: 15px;
+    }
+    .picture-flex {
+        display: flex;
+    }
+    .report {
+        min-height: 0px;
+    }
+    .profile-btn {
+        display: flex;
+        justify-content: center;
+        margin-left: 0px;
+        margin-top: 35px;
+        padding-bottom: 15px;
+        justify-content: space-evenly;
+    }
+    .title-hrs {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+    
+    }
+}
+
+/*Hovers for activities*/
+.bottom:hover {
+    background-color: #292f70;
+    cursor: pointer;
+  }
+
+
+
+/* .report-bottom {
+    background-color: #5847eb;
+    padding: 1.7rem 1.5rem;
+    border-radius: 1rem;
+}
+.report-for {
+    color: #bdc1ff;
+}
+.report {
+    background-color: hsl(235, 46%, 20%);
+    border-radius: 1rem;
+    margin-top: 50px;
+    padding: 3rem;
+    background-color: #4acf81;
+    background-image: url("./images/icon-exercise.svg");
+    background-repeat: no-repeat;
+    background-position-x: 95%;
+    background-position-y: -10%;
+} */
+
+/*for daily weekly monthly items     
+    flex-direction: column;
+    align-items: start;
+    padding: 3.2rem 2rem 1.8rem;*/

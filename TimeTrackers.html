@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="TimeTrackers.css">
+    <title>Frontend Mentor / Time Tracking Dashboard</title>
+</head>
+
+
+<body>
+    <main>
+        <div class="container">
+            <div class="report">
+                <div class="profile">
+                    <div class="picture-flex">
+                        <img src="./images/image-jeremy.png" alt="Jeremy Robson" class="picture">
+                        <div class="profile-text">
+                            <p class="report-for">Report for</p>
+                            <h1>Jeremy Robson</h1> <!--TEMP-->
+                        </div>
+                    </div>
+                </div>
+                <div class="profile-btn">
+                    <button class="btn" id="daily">Daily</button>
+                    <br>
+                    <button class="btn" id="weekly">Weekly</button>
+                    <br>
+                    <button class="btn" id="monthly">Monthly</button>
+                </div>
+            </div> <!--report-->
+
+            <div class="activity"> <!--alle aktiviteter-->
+
+                <div class="item-container"> <!--WORK-->
+                    <div class="top work">
+                        <div class="bottom">
+                            <div>
+                                <div class="title-ellipsis">
+                                    <h2>Work</h2> <span>•••</span>
+                                </div>
+                                <div class="title-hrs" id="work">
+                                    <h3>32 hrs</h3>
+                                    <p>Last Week - 36hrs</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> <!--WORK-->
+
+                <div class="item-container"> <!--PLAY-->
+                    <div class="top play">
+                        <div class="bottom">
+                            <div>
+                                <div class="title-ellipsis">
+                                    <h2>Play</h2> <span>•••</span>
+                                </div>
+                                <div class="title-hrs" id="play">
+                                    <h3>10 hrs</h3>
+                                    <p>Last Week - 8hrs</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> <!--PLAY-->
+
+                <div class="item-container"> <!--EXERCISE-->
+                    <div class="top study">
+                        <div class="bottom">
+                            <div>
+                                <div class="title-ellipsis">
+                                    <h2>Study</h2> <span>•••</span>
+                                </div>
+                                <div class="title-hrs" id="study">
+                                    <h3>4 hrs</h3>
+                                    <p>Last Week - 7hrs</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> <!--STUDY-->
+
+                <div class="item-container"> <!--EXERCISE-->
+                    <div class="top exercise">
+                        <div class="bottom">
+                            <div>
+                                <div class="title-ellipsis">
+                                    <h2>Exercise</h2> <span>•••</span>
+                                </div>
+                                <div class="title-hrs" id="exercise">
+                                    <h3>4 hrs</h3>
+                                    <p>Last Week - 5hrs</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> <!--EXERCISE-->
+
+                <div class="item-container"> <!--SOCIAL-->
+                    <div class="top social">
+                        <div class="bottom">
+                            <div>
+                                <div class="title-ellipsis">
+                                    <h2>Social</h2> <span>•••</span>
+                                </div>
+                                <div class="title-hrs" id="social">
+                                    <h3>5 hrs</h3>
+                                    <p>Last Week - 10hrs</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> <!--SOCIAL-->
+
+                <div class="item-container">
+                    <div class="top self-care">
+                        <div class="bottom">
+                            <div>
+                                <div class="title-ellipsis">
+                                    <h2>Self-Care</h2> <span>•••</span>
+                                </div>
+                                <div class="title-hrs" id="self-care">
+                                    <h3>2 hrs</h3>
+                                    <p>Last Week - 2hrs</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> <!--alle aktiviteter-->
+        </div> <!--container-->
+    </main>
+<script>
+    let dailybtn = document.getElementById("daily")
+    let weeklybtn = document.getElementById("weekly")
+    let monthlybtn = document.getElementById("monthly")
+
+    dailybtn.addEventListener("click", function () {
+        getdata("daily")
+        console.log("blah")
+    })
+    weeklybtn.addEventListener("click", function () {
+        getdata("weekly")
+    })
+    monthlybtn.addEventListener("click", function () {
+        getdata("monthly")
+    })
+    async function getdata(whichdata) {
+        let response = await fetch("data.json")
+        let data = await response.json()
+        console.log(data)
+    }
+    console.log(dailybtn)
+</script>
+</body>
+</html>
